@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<prefwindow id="appPreferences" width="440" height="260"
+			xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<prefpane id="pane1" label="Начало" style="padding: 1em">
+		<preferences>
+			<preference id="enable" name="extensions.highlighter.enable" type="bool"/>
+			<preference id="onlypres" name="extensions.highlighter.onlypres" type="bool"/>
+			<preference id="nonhtml" name="extensions.highlighter.nonhtml" type="bool"/>
+		</preferences>
+		
+		<checkbox id="enable-check" preference="enable" label="Включить подсветку синтаксиса" />
+		<vbox style="margin: 0.5em 1.5em">
+			<checkbox id="onlypres-check" preference="onlypres" label="... в одинарных &lt;PRE&gt; без &lt;CODE&gt;" />
+			<checkbox id="nonhtml-check"  preference="nonhtml"  label="... в не-HTML документах" />
+		</vbox>
+	</prefpane>
+
+</prefwindow>

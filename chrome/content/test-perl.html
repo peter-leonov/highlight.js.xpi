@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<head>
+  <title>Highlight</title>
+  
+  <link rel="stylesheet" href="sample.css">
+  <link rel="stylesheet" href="browser.css">
+  
+  <script type="text/javascript" src="highlight.js"></script>
+  <script type="text/javascript">
+    initHighlightingOnLoad();
+  </script>
+
+<body>
+
+
+<p>A bit of Perl:
+
+<pre><code class="perl">
+
+# JAPH
+print "Just another Perl hacker,\n";
+
+$_='987;s/^(d+)/$1-1/e;$1?eval:print"Just another Perl hacker,"';eval;
+
+$_="krJhruaesrltre c a cnP,ohet";$_.=$1,print$2while s/(..)(.)//;
+
+$_ = "wftedskaebjgdpjgidbsmnjgc";
+tr/a-z/oh, turtleneck Phrase Jar!/; print;
+
+
+`$=`;$_=\%!;($_)=/(.)/;$==++$|;($.,$/,$,,$\,$",$;,$^,$#,$~,$*,$:,@%)=(
+$!=~/(.)(.).(.)(.)(.)(.)..(.)(.)(.)..(.)……(.)/,$"),$=++;$.++;$.++;
+$_++;$_++;($_,$\,$,)=($~.$"."$;$/$%[$?]$_$\$,$:$%[$?]",$"&$~,$#,);$,++
+;$,++;$^|=$";`$_$\$,$/$:$;$~$*$%[$?]$.$~$*${#}$%[$?]$;$\$"$^$~$*.>&$=`
+
+not exp log srand xor s qq qx xor
+s x x length uc ord and print chr
+ord for qw q join use sub tied qx
+xor eval xor print qq q q xor int
+eval lc q m cos and print chr ord
+for qw y abs ne open tied hex exp
+ref y m xor scalar srand print qq
+q q xor int eval lc qq y sqrt cos
+and print chr ord for qw x printf
+each return local x y or print qq
+s s and eval q s undef or oct xor
+time xor ref print chr int ord lc
+foreach qw y hex alarm chdir kill
+exec return y s gt sin sort split
+
+</code></pre>
+
+<pre><code class="perl">
+
+# СТРОКИ
+qq();qq();
+my $x = qq(some double $x quoted string); qw qfa\q thisq;
+$x = q(some quoted string).q[another].q{part}.q|of|.q&lt;string&gt;;
+$x = q
+(
+multi
+line
+string
+);
+'
+multi
+line
+string
+';
+"";
+"@{print 1} ${f(1+2+3)}"
+
+# вроде, и не строки... а ведь строки
+{sub => 5}
+$hash{some_string};
+$hr = {abcstring => 1, _string => "string", -string => q(ok), $x => "sub => no"};
+
+
+
+# ПЕРЕМЕННЫЕ
+
+$x = "";
+$main::x = $x;
+# выбросим пяток мегабайт
+$#main::some_array = 1_000_000;
+
+# так хранится пространство имен main
+%main::;
+
+# встроенные переменные
+$^X;$^Y;$^Z;
+
+$0, $1 . $2 . $3;
+
+# глоб
+*a = *b;
+
+*{save} = sub {VIRTUAL}
+
+# хитрая штука... длинна массива (если считаем от 0):
+$#array+1;
+
+
+
+# ЧИСЛА
+
+2007;
+3.1415926;
+0.12345;
+01234567;
+0x0123456789ABCDEF;
+0_1_0; # это восемь (восмеричное 10)
+0__________________0; # это ноль :)))
+
+# не числа :)
+08;
+0xG;
+
+
+
+# РЕГУЛЯРКИ
+
+warn /pattern/;
+warn //;
+warn m/pattern/;/pattern/xes
+warn m/pat\/tern/;
+warn m/pattern/soi;
+warn s/pattern/replace/;
+warn s/pat\\t1\/ern/rep\/lace/si;
+warn s///;
+warn tr/абвгде/abvgde/;
+warn s/ aaa / bbb / or / eee /;
+
+
+
+# ФУНКЦИИ
+
+sub {some_error};
+sub somesub {}
+sub predeclared ($;@);
+sub predeclared : method ($;@){not_a_string};
+
+
+
+# ПОД
+
+=some pod
+
+some help
+about split
+
+= pod header
+
+=cut
+
+
+
+# МЕШАНИНА
+
+print if -f '/etc/passwd' and -x '/usr/bin/perl';
+test()&&-f $a;
+-e'/path';
+
+warn $! unless kill 0 => $$;
+
+use Utils;
+use Utils::System;
+
+$x = "string" || 123 || `cat`;
+
+1&&//&s/a/b/&/x/;
+print $0, $1 . $2 . $3
+
+print reverse sort grep {$_ > 0 && $_ < 5} grep {/\d/} map {int sin $_ ** 2 x 2} 1 .. 100;
+print;# комментарий
+
+&lt;STDIN&gt;or&lt;&gt;;
+
+
+1;
+
+</code></pre>
