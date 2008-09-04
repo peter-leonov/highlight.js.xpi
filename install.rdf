@@ -2,18 +2,17 @@
 <RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
          xmlns:NC="http://home.netscape.com/NC-rdf#"
          xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <RDF:Description RDF:about="rdf:#$u2UTx3"
-                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
-                   em:minVersion="1.5"
-                   em:maxVersion="3.0.0.*" />
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
-                   em:id="highlighter@softwaremaniacs.org"
-                   em:name="Highlighter.js"
-                   em:version="3.5"
-                   em:creator="Original author and current maintainer: Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;; extension maintainers: Alexey Kolganov &lt;kalgan@livejournal.com&gt; and Peter Leonov &lt;gojpeg@yandex.ru&gt;"
-                   em:description="Smart syntax highlighter."
-                   em:homepageURL="http://www.softwaremaniacs.org/soft/highlight/"
-                   em:optionsURL="chrome://highlighter/content/options.xul">
-    <em:targetApplication RDF:resource="rdf:#$u2UTx3"/>
+                   em:id="highlight@softwaremaniacs.org"
+                   em:name="highlight.js"
+                   em:version="4.2.1"
+                   em:creator="Original author and current maintainer: Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;; extension maintainer: Peter Leonov &lt;gojpeg@yandex.ru&gt;"
+                   em:description="Smart syntax highlighter"
+                   em:homepageURL="http://www.softwaremaniacs.org/soft/highlight/">
+    <em:targetApplication RDF:resource="rdf:#$Q2Vgg1"/>
   </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$Q2Vgg1"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3"
+                   em:maxVersion="3.0.*" />
 </RDF:RDF>
